@@ -16,7 +16,7 @@ Claude code(Sonnet4.6), GPT Codex(GPT 5.3 codex)와 벤치마크하여 성능을
 ## 주요 특징 (Key Features)
 
 * ** Autonomous Agentic Loop:** 생각(Thought) → 행동(Action) → 관찰(Observation) 패턴으로 복잡한 코딩 과업을 스스로 해결합니다.
-* ** Intelligent Model Rotation:** Google Gemini(Gemma 4)를 메인 두뇌로, GitHub Models(GPT-4o-mini 등)를 백업으로 사용하는 **LiteLLM 기반 무중단 API 아키텍처**를 적용했습니다.
+* ** Intelligent Model Rotation:** Google Gemini(Gemma 4)를 메인 두뇌로 하였습니다.
 * ** Skill-Creator Workflow:** 단순히 코드를 짜는 것을 넘어, 개발한 코드를 스스로 평가(Eval)하고 개선하는 반복적인 최적화 루프를 포함합니다.
 * ** Safety First:** 모든 터미널 명령어 실행은 사용자의 명시적인 승인(`Human-in-the-loop`) 없이는 작동하지 않습니다.
 * ** Ultra-Fast TUI:** `Rich` 및 `Textual`을 활용하여 터미널에서도 아름답고 직관적인 개발 경험을 제공합니다.
