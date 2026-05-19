@@ -1,0 +1,82 @@
+[
+  {
+    "query": "코드 리뷰 워크플로우를 스킬로 만들고 싶어. PR마다 같은 기준으로 보고 싶거든",
+    "should_trigger": true
+  },
+  {
+    "query": "내가 만든 스킬이 트리거가 너무 자주 돼서 문제야. description 어떻게 고치면 돼?",
+    "should_trigger": true
+  },
+  {
+    "query": "SKILL.md 초안 작성했는데 구조가 맞는지 검토해줘",
+    "should_trigger": true
+  },
+  {
+    "query": "스킬 처음 만드는 거라 어디서 시작해야 할지 모르겠어",
+    "should_trigger": true
+  },
+  {
+    "query": "run_eval.py 실행해서 트리거 정확도 좀 측정해줘. eval 셋은 여기 있어",
+    "should_trigger": true
+  },
+  {
+    "query": "스킬 description 최적화하고 싶은데 지금 recall이 너무 낮아",
+    "should_trigger": true
+  },
+  {
+    "query": "매일 하는 로그 파싱 작업을 스킬로 캡처하고 싶어",
+    "should_trigger": true
+  },
+  {
+    "query": "skills/ 폴더에 새 스킬 추가하려면 어떻게 해?",
+    "should_trigger": true
+  },
+  {
+    "query": "이 스킬 벤치마크 결과를 보니까 pass_rate가 60%밖에 안 나와. 개선 방향 알려줘",
+    "should_trigger": true
+  },
+  {
+    "query": "기존 스킬 eval 셋 만들고 싶어. should_trigger 쿼리 어떻게 설계하면 돼?",
+    "should_trigger": true
+  },
+  {
+    "query": "파이썬으로 CSV 읽어서 통계 내는 스크립트 짜줘",
+    "should_trigger": false
+  },
+  {
+    "query": "GEMMA_MANUAL.md에 수식 렌더링 규칙 추가해줘",
+    "should_trigger": false
+  },
+  {
+    "query": "프롬프트 잘 쓰는 방법이 뭐야? 더 정확한 답변 받고 싶어서",
+    "should_trigger": false
+  },
+  {
+    "query": "머신러닝 모델 평가 지표 설명해줘. precision이랑 recall 차이가 헷갈려",
+    "should_trigger": false
+  },
+  {
+    "query": "gemma.py 코드에서 히스토리 관리 부분 리팩토링해줘",
+    "should_trigger": false
+  },
+  {
+    "query": "Google GenAI API temperature 파라미터가 정확히 어떻게 작동하는지 알고 싶어",
+    "should_trigger": false
+  },
+  {
+    "query": "세션 저장하고 나중에 불러오는 방법 알려줘",
+    "should_trigger": false
+  },
+  {
+    "query": "이 함수가 왜 None을 반환하는지 디버깅해줘",
+    "should_trigger": false
+  },
+  {
+    "query": "JSON 스키마 설계할 때 nullable 필드 어떻게 표현해?",
+    "should_trigger": false
+  },
+  {
+    "query": "Gemma랑 GPT 비교해서 어떤 게 코딩에 더 나은지 알려줘",
+    "should_trigger": false
+  }
+]

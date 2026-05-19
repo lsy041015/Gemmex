@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVIDIA Isaac Sim 소개</title>
+    <style>
+        :root {
+            --nvidia-green: #76b900;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: #e0e0e0;
+            --accent-color: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            border-bottom: 4px solid var(--nvidia-green);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--nvidia-green);
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #bbb;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #444;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(118, 185, 0, 0.2);
+            border-color: var(--nvidia-green);
+        }
+
+        .card h3 {
+            color: var(--nvidia-green);
+            margin-top: 0;
+            border-bottom: 1px solid #444;
+            padding-bottom: 0.5rem;
+        }
+
+        .card ul {
+            padding-left: 1.2rem;
+        }
+
+        .card li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+            border-top: 1px solid #333;
+            margin-top: 3rem;
+        }
+
+        .highlight {
+            color: var(--nvidia-green);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>NVIDIA Isaac Sim</h1>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <p>NVIDIA Isaac Sim은 <span class="highlight">NVIDIA Omniverse</span> 플랫폼을 기반으로 구축된 로보틱스 시뮬레이션 도구입니다. 
+            물리적으로 정확하고 시각적으로 사실적인 환경을 제공하여 로봇의 설계, 테스트 및 학습 과정을 가속화합니다.</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>핵심 기술 스택</h3>
+                <ul>
+                    <li><strong>NVIDIA Omniverse:</strong> 실시간 협업 및 USD(Universal Scene Description) 기반의 씬 구성</li>
+                    <li><strong>RTX Rendering:</strong> 레이 트레이싱을 통한 실사 수준의 시각적 환경 구현</li>
+                    <li><strong>PhysX:</strong> 고성능 물리 엔진을 통한 정밀한 충돌 및 역학 시뮬레이션</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>주요 기능</h3>
+                <ul>
+                    <li><strong>합성 데이터 생성 (SDG):</strong> AI 학습을 위한 대량의 라벨링된 이미지 및 센서 데이터 자동 생성</li>
+                    <li><strong>ROS/ROS2 통합:</strong> 표준 로봇 운영 체제와의 원활한 연결 및 제어</li>
+                    <li><strong>강화 학습 (RL):</strong> Isaac Gym과의 연동을 통한 수천 대의 로봇 병렬 학습</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>활용 분야</h3>
+                <ul>
+                    <li><strong>디지털 트윈:</strong> 실제 공장이나 창고를 가상 세계에 그대로 복제하여 최적화</li>
+                    <li><strong>센서 시뮬레이션:</strong> LiDAR, 카메라, 초음파 센서의 정밀한 동작 검증</li>
+                    <li><strong>안전성 테스트:</strong> 위험한 실제 환경 대신 가상 환경에서 엣지 케이스 테스트</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 NVIDIA Isaac Sim Introduction Page - Created for Demonstration
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지뢰찾기 게임 규칙 설명</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --border-color: #ddd;
+            --highlight-color: #e74c3c;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        .rule-section {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--highlight-color);
+        }
+
+        /* 시각적 예시 테이블 */
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            grid-template-rows: repeat(3, 50px);
+            gap: 5px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .cell {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #bbb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            background-color: #eee;
+        }
+
+        .cell.mine {
+            background-color: #555;
+            color: white;
+        }
+
+        .cell.number {
+            background-color: white;
+            color: blue;
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>지뢰찾기(Minesweeper) 규칙</h1>
+
+        <div class="rule-section">
+            <h2>1. 게임의 목표</h2>
+            <p>지뢰찾기의 목표는 지뢰가 매설되어 있지 않은 모든 칸을 찾아내어 <span class="highlight">모두 여는 것</span>입니다.</p>
+        </div>
+
+        <div class="rule-section">
+            <h2>2. 기본 조작법</h2>
+            <ul>
+                <li><strong>왼쪽 클릭:</strong> 선택한 칸을 엽니다.</li>
+                <li><strong>오른쪽 클릭:</strong> 지뢰가 있다고 의심되는 칸에 <span class="highlight">깃발</span>을 꽂거나 제거합니다.</li>
+            </ul>
+        </div>
+
+        <div class="rule-section">
+            <h2>3. 숫자의 의미</h2>
+            <p>칸을 열었을 때 나타나는 숫자는 해당 칸을 둘러싼 <strong>8방향(가로, 세로, 대각선)</strong>에 인접한 지뢰의 총 개수를 의미합니다.</p>
+            
+            <div class="example-grid">
+                <div class="cell">1</div>
+                <div class="cell number">1</div>
+                <div class="cell">1</div>
+                <div class="cell number">1</div>
+                <div class="cell number" style="color: red;">2</div>
+                <div class="cell mine">💣</div>
+                <div class="cell">1</div>
+                <div class="cell number">1</div>
+                <div class="cell">1</div>
+            </div>
+            <p class="caption">(예시: 중앙의 '2'는 주변 8칸 중 지뢰가 2개 있음을 의미합니다.)</p>
+        </div>
+
+        <div class="rule-section">
+            <h2>4. 승리와 패배 조건</h2>
+            <ul>
+                <li><strong>승리:</strong> 지뢰를 제외한 모든 안전한 칸을 모두 열었을 때 승리합니다.</li>
+                <li><strong>패배:</strong> 지뢰가 있는 칸을 왼쪽 클릭으로 열었을 때 즉시 게임이 종료되며 패배합니다.</li>
+            </ul>
+        </div>
+
+        <div class="rule-section">
+            <h2>5. 전략 팁</h2>
+            <ul>
+                <li>숫자가 '1'인데 주변에 열리지 않은 칸이 하나뿐이라면, 그 칸은 반드시 지뢰입니다.</li>
+                <li>숫자가 나타내는 지뢰의 개수만큼 주변에 깃발을 모두 꽂았다면, 나머지 열리지 않은 칸들은 안전한 칸입니다.</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Minesweeper Guide. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
